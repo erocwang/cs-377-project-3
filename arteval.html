@@ -41,7 +41,8 @@
     
         <div class="row" id="workContent">
             <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
-                <p class="well"><img src="${content}"></p>
+                <div class="bounding-box">    
+                </div>
             </div>
     
             <div class="col-xs-12 col-sm-4 fields">
@@ -120,6 +121,13 @@
     }
     .radio:first-of-type{
         margin-top: -5px;
+    }
+    .bounding-box {
+        background-image: url("${content}");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 500px;
+        width: 500px
     }
     </style>
     <!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
