@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>HIT</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script></head><body><form name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" value="" name="assignmentId" id="assignmentId" /><!-- HIT template: WebsiteDataCollection-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
     <!-- HIT template: Sentiment-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
     <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta name="referrer" content="no-referrer">
     <section class="container" id="Sentiment"><!-- Instructions (collapsible) -->
         <div class="row">
             <div class="col-xs-12 col-md-12">
@@ -13,10 +14,11 @@
                             <strong>What Will You Be Asked to Do?</strong>
                             <br>
                             If you decide to participate, you will be asked to consecutively rate and give 
-                            your reasoning for your rating for 5 works of art on a scale from 1-10.  It 
-                            should take you about 3 minutes to complete.
+                            your reasoning for your rating for a work of art on a scale from 1-10.  It 
+                            should take you about 2 minutes to complete.
                             <br><br> 
                             <strong>Risks</strong>
+                            <br>
                             Except for your time and inconvenience, there are no risks to you from participating in this study. 
                             The risks are equivalent to using the internet.
                             <br><br>
@@ -27,17 +29,18 @@
                             <br><br>
                             <strong>Compensation</strong>
                             <br> 
-                            You will receive $0.12 for participating in this study. 
+                            You will receive $0.25 for completing this HIT. 
                             <br><br>
                             <strong>Confidentiality</strong>
                             <br> 
-                            This study is anonymous.  Please do not write your name or any identifiable information in your response. There will be no records linking 
-                            you to the data. Data will be stored locally in a JSON file for around 30 days after this study.
+                            This study is anonymous. Please do not write your name or any identifiable information in your response. Your input will be anonymized 
+                            once removed from MTurk and be stored locally for around 30 days. As per Amazon's privacy policy, your data will not be shared with any unaffiliated 3rd
+                            parties and will be securely protected. 
                             <br><br>
                             <strong>Conditions for Rejection</strong>
                             <br> 
-                            Participation is voluntary.  If you choose to take part in this study, you may stop at any time. However, you must evaluate all 5 works 
-                            of art to be eligible for compensation. In addition, lack of reasoning in your evaluation explanations can be means for rejection. 
+                            Participation is voluntary.  If you choose to take part in this study, you may stop at any time. However, you must evaluate complete at least 1 HIT to be eligible for compensation. 
+                            In addition, lack of reasoning in your evaluation explanations can be means for rejection. 
                             <br><br>
                             <strong>If You Have Questions</strong>
                             <br> 
@@ -91,9 +94,7 @@
     
         <div class="row" id="workContent">
             <div class="col-xs-12 col-sm-8 content"><!-- Place the content (in this case a block of text) below. If content is not text then replace with the relevant html element (image, url, video) below. -->
-                This work of art was [painted/drawn/done] by [name] in [date].  [name] is a 
-                [description of artist, including education, affiliated institutions, etc].  
-                [His/Her] work now hangs in the [museum or gallery if applicable]. 
+                ${description} 
                 <div class="bounding-box">    
                 </div>
                 <strong>Below, please type a brief description (min: 25 , max: 150 characters) of the reasoning behind your rating.</strong>
@@ -221,8 +222,7 @@
             // Consent form expand/collapse 
             var content2 = $('#instructionBody2');
             var trigger2 = $('#collapseTrigger2');
-            content2.hide();
-            $('.collapse-text2').text('(Click to expand)');
+            $('.collapse-text2').text('(Click to collapse)');
             trigger2.click(function(){
                 content2.toggle();
                 var isVisible2 = content2.is(':visible');

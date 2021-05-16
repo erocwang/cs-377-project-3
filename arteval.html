@@ -1,6 +1,7 @@
 <!DOCTYPE html><html><head><title>HIT</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script></head><body><form name="mturk_form" method="post" id="mturk_form" action="https://www.mturk.com/mturk/externalSubmit"><input type="hidden" value="" name="assignmentId" id="assignmentId" /><!-- HIT template: WebsiteDataCollection-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
     <!-- HIT template: Sentiment-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
     <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta name="referrer" content="no-referrer">
     <section class="container" id="Sentiment"><!-- Instructions (collapsible) -->
         <div class="row">
             <div class="col-xs-12 col-md-12">
@@ -28,7 +29,7 @@
                             <br><br>
                             <strong>Compensation</strong>
                             <br> 
-                            You will receive $0.12 for participating in this study. 
+                            You will receive $0.25 for completing this HIT. 
                             <br><br>
                             <strong>Confidentiality</strong>
                             <br> 
@@ -38,8 +39,8 @@
                             <br><br>
                             <strong>Conditions for Rejection</strong>
                             <br> 
-                            Participation is voluntary.  If you choose to take part in this study, you may stop at any time. However, you must evaluate all 5 works 
-                            of art to be eligible for compensation. In addition, lack of reasoning in your evaluation explanations can be means for rejection. 
+                            Participation is voluntary.  If you choose to take part in this study, you may stop at any time. However, you must evaluate complete at least 1 HIT to be eligible for compensation. 
+                            In addition, lack of reasoning in your evaluation explanations can be means for rejection. 
                             <br><br>
                             <strong>If You Have Questions</strong>
                             <br> 
@@ -55,7 +56,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                <div class="panel panel-primary"><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger2"><strong>Artwork Evaluation Instructions</strong> <span class="collapse-text2">(Click to expand)</span> </a>
+                <div class="panel panel-primary"><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger2"><strong>Artwork Evaluation Instructions</strong> <span class="collapse-text2">(Click to collapse)</span> </a>
                     <div class="panel-body" id="instructionBody2"><strong>Please rate the following work of art from 1 (I do not like this work of art at all) to 10 (I very much like this work of art). Your answer should be based purely on your personal enjoyment of the piece.</strong>
                         <table class="table table-condensed table-striped table-responsive">
                             <tbody>
@@ -199,7 +200,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         height: 500px;
-        width: 500px
+        width: auto
     }
     </style>
     <!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
@@ -220,8 +221,7 @@
             // Consent form expand/collapse 
             var content2 = $('#instructionBody2');
             var trigger2 = $('#collapseTrigger2');
-            content2.hide();
-            $('.collapse-text2').text('(Click to expand)');
+            $('.collapse-text2').text('(Click to collapse)');
             trigger2.click(function(){
                 content2.toggle();
                 var isVisible2 = content2.is(':visible');
